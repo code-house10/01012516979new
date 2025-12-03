@@ -741,35 +741,51 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-in-out whitespace-nowrap text-sm font-bold">اتصل الآن</span>
 </button>
 
-<!-- ================== MODAL ================== -->
+<!-- ================== MODAL (UPDATED) ================== -->
 <div id="callModal" class="fixed inset-0 z-[100] hidden" role="dialog" aria-modal="true">
   <div class="absolute inset-0 bg-stone-900/80 backdrop-blur-sm transition-opacity" onclick="closeCallModal()"></div>
   
   <div class="flex items-center justify-center min-h-screen px-4 py-8">
     <div class="bg-white rounded-3xl shadow-2xl w-full max-w-sm p-8 relative z-10 transform scale-95 opacity-0 transition-all duration-300" id="callModalContent">
-      <button onclick="closeCallModal()" class="absolute top-4 left-4 text-stone-400 hover:text-stone-600 transition-colors">
+      <!-- Close Icon -->
+      <button onclick="closeCallModal()" class="absolute top-4 left-4 text-stone-400 hover:text-stone-600 transition-colors z-20">
         <i class="fas fa-times text-xl"></i>
       </button>
 
-      <div class="w-20 h-20 bg-primary-50 rounded-full flex items-center justify-center mx-auto mb-6 text-primary-600 ring-8 ring-primary-50/50">
-        <i class="fas fa-headset text-4xl"></i>
+      <!-- Animated Icon -->
+      <div class="w-24 h-24 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6 text-green-600 ring-4 ring-green-100 animate-pulse">
+        <i class="fas fa-phone-volume text-5xl transform -rotate-12"></i>
       </div>
 
-      <h3 class="text-center text-2xl font-black text-stone-900 mb-2">تحدث معنا</h3>
-      <p class="text-center text-stone-500 text-sm mb-8">
-        فريق خدمة العملاء جاهز للرد على استفساراتك وتقديم عرض سعر فوري.
+      <!-- Compelling Title & Subtitle -->
+      <h3 class="text-center text-2xl font-black text-stone-900 mb-2">تأكيد الاتصال</h3>
+      <p class="text-center text-stone-600 font-bold text-sm mb-6 px-2">
+        لتسجيل طلبك وتفعيل العرض فوراً، يرجى الضغط على زر الاتصال أدناه
       </p>
 
-      <a href="tel:01012516979" onclick="closeCallModal()" class="block w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-4 rounded-xl text-center shadow-lg shadow-primary-600/30 transition-all hover:-translate-y-1 mb-3 flex items-center justify-center gap-2">
-         <i class="fas fa-phone -scale-x-100"></i> اتصال مباشر
+      <!-- Massive Call Button (Conversion Focus) -->
+      <a href="tel:01012516979" onclick="closeCallModal()" class="group relative block w-full bg-green-600 hover:bg-green-700 text-white font-bold py-6 rounded-2xl text-center shadow-xl shadow-green-600/30 transition-all hover:scale-[1.02] active:scale-95 mb-4 overflow-hidden">
+         <!-- Shimmer Effect -->
+         <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:animate-[shimmer_1.5s_infinite]"></div>
+         
+         <div class="flex flex-col items-center justify-center gap-1 relative z-10">
+             <span class="text-sm font-medium opacity-90 mb-1">اضغط هنا للاتصال</span>
+             <div class="flex items-center gap-3 text-3xl md:text-4xl font-black tracking-wider dir-ltr">
+                <i class="fas fa-phone text-2xl"></i>
+                <span>01012516979</span>
+             </div>
+         </div>
       </a>
       
-      <div class="bg-stone-50 border border-stone-100 rounded-xl p-4 text-center mb-3">
-         <p class="text-2xl font-black text-stone-800 dir-ltr select-all">01012516979</p>
+      <!-- Trust Signal -->
+      <div class="text-center">
+          <p class="text-xs text-stone-400 font-medium">
+            <i class="fas fa-check-circle text-green-500 ml-1"></i> متاحين 24 ساعة لخدمتكم
+          </p>
       </div>
 
-      <button onclick="closeCallModal()" class="w-full py-3 text-stone-400 font-bold hover:text-stone-600 text-sm">
-        إلغاء
+      <button onclick="closeCallModal()" class="w-full mt-6 py-2 text-stone-400 font-bold hover:text-stone-600 text-sm transition-colors">
+        إغلاق
       </button>
     </div>
   </div>
